@@ -59,7 +59,7 @@ export default function BrandStory() {
                             initial={{ scale: 1.2, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 0.6 }}
                             transition={{ duration: 1.5 }}
-                            className="absolute inset-0 bg-[url('/brand-story.png')] bg-cover bg-center mix-blend-luminosity opacity-40 grayscale"
+                            className="absolute inset-0 bg-[url('/brand-story.png')] bg-cover bg-center opacity-90"
                         />
                     </div>
 
