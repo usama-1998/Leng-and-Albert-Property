@@ -34,8 +34,40 @@ const portfolioItems = [
     },
 ];
 
+const portfolioItemsRow2 = [
+    {
+        id: 5,
+        title: "Clementi High-Floor Unit",
+        category: "5-Room Panoramic",
+        price: "Sold above valuation",
+        image: "/track-record-3.png",
+    },
+    {
+        id: 6,
+        title: "Tiong Bahru Conservation",
+        category: "Stair-Up Unit",
+        price: "Rare Find",
+        image: "/track-record-4.png",
+    },
+    {
+        id: 7,
+        title: "Punggol Waterway Terrace",
+        category: "4-Room Loft",
+        price: "Record psf",
+        image: "/track-record-3.png", // Reusing styling
+    },
+    {
+        id: 8,
+        title: "Dawson SkyTerrace",
+        category: "Premium Apartment",
+        price: "Sold in 1 viewing",
+        image: "/track-record-4.png", // Reusing styling
+    },
+];
+
 // Quadruple items to ensure seamless "1 set" shift logic works perfectly on all screen sizes
 const trackRecordItems = [...portfolioItems, ...portfolioItems, ...portfolioItems, ...portfolioItems];
+const trackRecordItems2 = [...portfolioItemsRow2, ...portfolioItemsRow2, ...portfolioItemsRow2, ...portfolioItemsRow2];
 
 const MarqueeRow = ({ items, direction = "left", speed = 40 }: { items: typeof portfolioItems, direction?: "left" | "right", speed?: number }) => {
     return (
@@ -107,7 +139,7 @@ export default function Portfolio() {
                 <MarqueeRow items={trackRecordItems} direction="left" speed={50} />
 
                 {/* Row 2 - Right */}
-                <MarqueeRow items={trackRecordItems} direction="right" speed={50} />
+                <MarqueeRow items={trackRecordItems2} direction="right" speed={50} />
             </div>
         </section>
     );
