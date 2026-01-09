@@ -5,7 +5,7 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 ## Features
 
 - **Luxury Design System**: Custom "Dark Mode" theme with gold accents, using `Cormorant Garamond` (Serif) and `Montserrat` (Sans).
-- **Interactive Hero**: Cinematic zoom background, parallax text, and interactive video/lead-gen modals.
+- **Interactive Hero**: Cinematic zoom background, high-contrast editorial typography, and interactive video/lead-gen modals.
 - **Data Visualization**: Vertical "Strategy Roadmap" that reveals itself on scroll.
 - **Editorial Layouts**: Magazine-style "Brand Story" and "Why Us" sections with floating elements.
 - **Social Proof**: Infinite ticker with high-end typography.

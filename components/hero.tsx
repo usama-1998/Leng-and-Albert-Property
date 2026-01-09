@@ -26,10 +26,11 @@ export default function Hero() {
         >
             {/* Background with Zoom Effect */}
             <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-[#050505] z-10" />
+                {/* Darker gradient for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-[#050505] z-10" />
                 <motion.div
                     style={{ scale: scaleBg }}
-                    className="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center opacity-70"
+                    className="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center opacity-50"
                 />
             </div>
 
