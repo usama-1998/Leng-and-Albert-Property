@@ -14,35 +14,22 @@ const navLinks = [
 
 export default function Navbar() {
     const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-
-            // Determine if scrolled significantly to change background
-            setIsScrolled(currentScrollY > 50);
-
-            // Hide/Show logic
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                setIsVisible(false);
-            } else {
-                setIsVisible(true);
-            }
-
-            setLastScrollY(currentScrollY);
+            setIsScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
     return (
         <AnimatePresence>
             <motion.nav
-                initial={{ y: -100 }}
-                animate={{ y: isVisible ? 0 : -100 }}
+                initial={{ y: 0 }}
+                animate={{ y: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className={clsx(
                     "fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 md:px-12 transition-colors duration-300",

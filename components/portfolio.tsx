@@ -52,11 +52,14 @@ export default function Portfolio() {
                     className="mb-16"
                 >
                     <span className="font-montserrat text-[#D4AF37] text-xs tracking-[0.2em] uppercase block mb-4">
-                        Curated Collection
+                        Proven Results
                     </span>
-                    <h2 className="font-cormorant text-4xl md:text-5xl text-[#ededed]">
-                        Featured <span className="italic text-[#888]">Assets</span>
+                    <h2 className="font-cormorant text-4xl md:text-5xl text-[#ededed] mb-6">
+                        Track <span className="italic text-[#888]">Record</span>
                     </h2>
+                    <p className="font-montserrat text-white/60 text-sm max-w-xl">
+                        We have helped clients transact over <span className="text-[#D4AF37]">S$500M+</span> worth of real estate, consistently identifying undervalued assets and exiting at peak performance.
+                    </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
