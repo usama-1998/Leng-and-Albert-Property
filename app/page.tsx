@@ -6,6 +6,8 @@ import BrandStory from "@/components/brand-story";
 import WhyUs from "@/components/why-us";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import Portfolio from "@/components/portfolio";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -14,7 +16,9 @@ export default function Home() {
       <Hero />
       {/* <SocialProof /> */}
       <StrategySection />
+      <Portfolio />
       <BrandStory />
+      <Testimonials />
       <WhyUs />
       <ContactSection />
       <Footer />

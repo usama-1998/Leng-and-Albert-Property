@@ -6,7 +6,8 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 
 - **Luxury Design System**: Custom "Dark Mode" theme with gold accents, using `Cormorant Garamond` (Serif) and `Montserrat` (Sans).
 - **Interactive Hero**: Cinematic zoom background, high-contrast editorial typography, and interactive video/lead-gen modals.
-- **Data Visualization**: Vertical "Strategy Roadmap" that reveals itself on scroll.
+- **Curated Portfolio**: High-end grid layout showcasing luxury assets (`Good Class Bungalow`, `Penthouse`).
+- **Client Stories**: Elegant testimonial section with marble texture background.
 - **Editorial Layouts**: Magazine-style "Brand Story" and "Why Us" sections with floating elements.
 - **Social Proof**: Infinite ticker with high-end typography.
 - **Performance**: Built with Next.js 15 (Turbopack) and Framer Motion for 60fps animations.
