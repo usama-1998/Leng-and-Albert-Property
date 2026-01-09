@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Leng & Albert Property - Wealth Architects
+
+A unique, luxury real estate portfolio website designed for high-net-worth clients in Singapore. This project moves away from standard templates, featuring a "dark luxury" aesthetic (`#050505` & `#D4AF37`), editorial typography, and advanced interactive elements.
+
+## Features
+
+- **Luxury Design System**: Custom "Dark Mode" theme with gold accents, using `Cormorant Garamond` (Serif) and `Montserrat` (Sans).
+- **Interactive Hero**: Cinematic zoom background, parallax text, and interactive video/lead-gen modals.
+- **Data Visualization**: Vertical "Strategy Roadmap" that reveals itself on scroll.
+- **Editorial Layouts**: Magazine-style "Brand Story" and "Why Us" sections with floating elements.
+- **Social Proof**: Infinite ticker with high-end typography.
+- **Performance**: Built with Next.js 15 (Turbopack) and Framer Motion for 60fps animations.
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Font**: Google Fonts (`Cormorant Garamond`, `Montserrat`)
 
 ## Getting Started
 
@@ -6,31 +25,13 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for deployment on Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+&copy; 2026 Leng & Albert Property. Designed for Wealth.
