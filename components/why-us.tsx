@@ -9,19 +9,19 @@ const features = [
         title: "Logic Over Emotion",
         number: "01",
         desc: "We strip away the emotional bias. Every recommendation is backed by 20+ years of market data overlap, ensuring your 'dream home' is also a fortress for your wealth.",
-        image: "/blueprint-bg.png"
+        image: "/why-us-1.png"
     },
     {
         title: "The Exit Strategy",
         number: "02",
         desc: "Most buy hoping to stay forever. We buy knowing when to sell. We engineer your exit liquidity before you even sign the option.",
-        image: "/blueprint-bg.png"
+        image: "/why-us-2.png"
     },
     {
         title: "Legacy Architecture",
         number: "03",
         desc: "It's not just about one property. It's about structuring a portfolio that compounds, creating a generational safety net for your children.",
-        image: "/blueprint-bg.png" // Reusing asset for consistency
+        image: "/why-us-3.png"
     }
 ];
 
