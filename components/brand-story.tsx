@@ -37,6 +37,17 @@ export default function BrandStory() {
                             "We treat your property journey as a business decision, not an emotional one."
                         </p>
                     </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className="mt-10"
+                    >
+                        <button className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-montserrat text-xs tracking-[0.2em] uppercase hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-pointer">
+                            Book Consultation
+                        </button>
+                    </motion.div>
                 </div>
 
                 {/* Visual / Image */}
@@ -52,9 +63,30 @@ export default function BrandStory() {
                         />
                     </div>
 
-                    {/* Decorative Elements */}
-                    <div className="absolute -bottom-8 -left-8 w-24 h-24 border-l border-b border-[#D4AF37] z-20" />
-                    <div className="absolute -top-8 -right-8 w-24 h-24 border-r border-t border-[#D4AF37]/30 z-20" />
+                    {/* Decorative Elements - Animated */}
+                    <motion.div
+                        animate={{ height: ["0%", "20%", "0%"], width: ["0%", "20%", "0%"], opacity: [0, 1, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute -bottom-8 -left-8 border-l-2 border-b-2 border-[#D4AF37] z-20"
+                    />
+                    <motion.div
+                        initial={{ width: 0, height: 0 }}
+                        whileInView={{ width: "6rem", height: "6rem" }}
+                        transition={{ duration: 1.5, delay: 0.5 }}
+                        className="absolute -bottom-8 -left-8 w-24 h-24 border-l border-b border-[#D4AF37]/50 z-10"
+                    />
+
+                    <motion.div
+                        animate={{ height: ["0%", "20%", "0%"], width: ["0%", "20%", "0%"], opacity: [0, 1, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                        className="absolute -top-8 -right-8 border-r-2 border-t-2 border-[#D4AF37] z-20"
+                    />
+                    <motion.div
+                        initial={{ width: 0, height: 0 }}
+                        whileInView={{ width: "6rem", height: "6rem" }}
+                        transition={{ duration: 1.5, delay: 0.5 }}
+                        className="absolute -top-8 -right-8 w-24 h-24 border-r border-t border-[#D4AF37]/50 z-10"
+                    />
                 </div>
 
             </div>

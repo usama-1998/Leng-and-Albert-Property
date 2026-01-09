@@ -58,7 +58,7 @@ export default function Navbar() {
                         href="#contact"
                         className="px-6 py-2 border border-[#ededed]/30 hover:border-[#D4AF37] hover:bg-[#D4AF37]/10 text-[#ededed] hover:text-[#D4AF37] text-xs tracking-widest uppercase transition-all duration-300"
                     >
-                        Start Legacy
+                        Book Consultation
                     </Link>
                 </div>
 

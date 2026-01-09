@@ -73,7 +73,7 @@ export default function Hero() {
                         onClick={() => setIsFormOpen(true)}
                         className="px-8 py-4 bg-[#D4AF37] text-[#050505] font-montserrat text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b5952f] transition-all hover:scale-105 cursor-pointer"
                     >
-                        Start Your Legacy
+                        Book Consultation
                     </button>
 
                     <button
