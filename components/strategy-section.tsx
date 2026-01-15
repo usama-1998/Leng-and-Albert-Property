@@ -40,7 +40,7 @@ export default function StrategySection() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 relative">
 
                 {/* Section Header */}
-                <div className="md:w-1/3 text-left sticky top-32 h-fit">
+                <div className="md:w-1/3 text-left md:sticky md:top-32 h-fit">
                     <motion.span
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -91,20 +91,20 @@ function StrategyCard({ step, index }: { step: any, index: number }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="group relative"
+            className="group relative pl-4 md:pl-0"
         >
-            <span className="absolute -left-[calc(2rem_+_20px)] md:-left-[calc(5rem_+_1px)] top-2 text-[#333] font-cormorant text-8xl opacity-20 select-none group-hover:text-[#D4AF37]/20 transition-colors duration-500">
+            <span className="absolute -left-[calc(2rem_+_10px)] md:-left-[calc(5rem_+_1px)] top-0 md:top-2 text-[#333] font-cormorant text-6xl md:text-8xl opacity-20 select-none group-hover:text-[#D4AF37]/20 transition-colors duration-500">
                 {step.number}
             </span>
 
-            <h3 className="font-cormorant text-4xl md:text-5xl text-[#ededed] mb-2 group-hover:text-[#D4AF37] transition-colors duration-300">
+            <h3 className="font-cormorant text-4xl md:text-5xl text-[#ededed] mb-2 group-hover:text-[#D4AF37] transition-colors duration-300 relative z-10">
                 {step.title}
             </h3>
-            <h4 className="font-montserrat text-sm tracking-widest uppercase text-[#666] mb-6">
+            <h4 className="font-montserrat text-sm tracking-widest uppercase text-[#999] mb-6 relative z-10">
                 {step.subtitle}
             </h4>
 
-            <p className="font-montserrat text-[#a3a3a3] text-sm md:text-base leading-relaxed max-w-md">
+            <p className="font-montserrat text-[#cccccc] text-sm md:text-base leading-relaxed max-w-md relative z-10">
                 {step.description}
             </p>
         </motion.div>

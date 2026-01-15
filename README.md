@@ -9,9 +9,10 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 - **Track Record**: Highlight section showing S$500M+ in transaction volume with Property Highlights.
 - **Client Stories**: Elegant testimonial section with marble texture background.
 - **Why Us**: Sticky Parallax cards with conceptual 8K imagery (Data Nexus, Strategy, Legacy).
+- **Mobile First**: Fully responsive design with touch-friendly navigation, optimized layouts, and preventing horizontal overflow.
 - **Editorial Layouts**: Magazine-style "Brand Story" sections with floating elements.
 - **Social Proof**: Infinite ticker with high-end typography.
-- **Performance**: Built with Next.js 15 (Turbopack) and Framer Motion for 60fps animations.
+- **Performance**: Built with Next.js 16 (Turbopack) and Framer Motion for 60fps animations.
 
 ## Tech Stack
 
