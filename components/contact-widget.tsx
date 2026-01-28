@@ -93,7 +93,7 @@ export default function ContactWidget() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-base leading-tight">Christine</h3>
-                            <p className="text-xs text-green-100 opacity-80">Christian Oh&apos;s PA</p>
+                            <p className="text-xs text-green-100 opacity-80">Leng and Albert&apos;s Assistant</p>
                         </div>
                     </div>
                     <button
