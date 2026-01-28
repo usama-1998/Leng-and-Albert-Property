@@ -6,7 +6,7 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 
 - **Luxury Design System**: Custom "Dark Mode" theme with gold accents, using `Cormorant Garamond` (Serif) and `Montserrat` (Sans).
 - **Interactive Hero**: Cinematic zoom background, high-contrast editorial typography, and interactive video/lead-gen modals.
-- **Featured In**: Credibility section showcasing authentic SVG logos (Yahoo Finance, 99.co, Mediacorp) with luxury interactive hover effects.
+- **Featured In**: Credibility section showcasing authentic SVG logos (Yahoo Finance, 99.co, Mediacorp) with interactive zoom animation.
 - **Core Philosophy**: "Six Box Concept" methodology focusing on logical, unemotional property decisions.
 - **Track Record**: Highlight section showing S$500M+ in transaction volume with Property Highlights.
 - **Client Stories**: Elegant testimonial section with marble texture background.

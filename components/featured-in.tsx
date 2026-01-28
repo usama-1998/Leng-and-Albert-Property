@@ -13,7 +13,7 @@ export default function FeaturedIn() {
                 <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 hover:opacity-80 transition-opacity duration-500">
 
                     {/* Yahoo Finance Logo */}
-                    <div className="h-10 md:h-16 w-auto flex items-center justify-center grayscale-[30%] opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                    <div className="h-10 md:h-16 w-auto flex items-center justify-center transition-transform duration-500 hover:scale-110 cursor-pointer">
                         <img
                             src="/logos/yahoo.svg"
                             alt="Yahoo Finance"
@@ -22,7 +22,7 @@ export default function FeaturedIn() {
                     </div>
 
                     {/* 99.co Logo */}
-                    <div className="h-10 md:h-16 w-auto flex items-center justify-center grayscale-[30%] opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                    <div className="h-10 md:h-16 w-auto flex items-center justify-center transition-transform duration-500 hover:scale-110 cursor-pointer">
                         <img
                             src="/logos/99co.svg"
                             alt="99.co"
@@ -31,7 +31,7 @@ export default function FeaturedIn() {
                     </div>
 
                     {/* Mediacorp Logo */}
-                    <div className="h-14 md:h-24 w-auto flex items-center justify-center grayscale-[30%] opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                    <div className="h-14 md:h-24 w-auto flex items-center justify-center transition-transform duration-500 hover:scale-110 cursor-pointer">
                         <img
                             src="/logos/mediacorp.svg"
                             alt="Mediacorp"
