@@ -92,7 +92,7 @@ export default function ContactWidget() {
                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#075E54] rounded-full"></div>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base leading-tight">Your Assistant</h3>
+                            <h3 className="font-semibold text-base leading-tight">Leng & Albert&apos;s Assistant</h3>
                             <p className="text-xs text-green-100 opacity-80">Here to help</p>
                         </div>
                     </div>
