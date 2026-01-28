@@ -9,11 +9,14 @@ import Footer from "@/components/footer";
 import Portfolio from "@/components/portfolio";
 import Testimonials from "@/components/testimonials";
 
+import FeaturedIn from "@/components/featured-in";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <FeaturedIn />
       {/* <SocialProof /> */}
       <StrategySection />
       <Portfolio />

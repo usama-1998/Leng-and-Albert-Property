@@ -34,7 +34,7 @@ export default function BrandStory() {
                             At Leng & Albert, we don't just facilitate transactions; we engineer portfolios. We look at the data that others ignore—the lease decay curves, the micro-market shifts, and the "exit liquidity" that determines whether you profit or stagnate.
                         </p>
                         <p className="text-[#ededed] font-medium pt-4 border-t border-[#333]">
-                            "We treat your property journey as a business decision, not an emotional one."
+                            "We walk with you through your property journey, helping you make clear, well-thought-out decisions without the stress of emotion."
                         </p>
                     </motion.div>
                     <motion.div

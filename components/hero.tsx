@@ -59,7 +59,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="font-montserrat text-[#a3a3a3] text-sm md:text-base max-w-lg tracking-wide leading-relaxed mb-12"
                 >
-                    We help HDB owners navigate the "Decaying Lease" trap and execute the S.B.S. roadmap for long-term asset growth.
+                    We help HDB owners navigate the "Decaying Lease" trap and execute the Six Box Concept for long-term asset growth.
                 </motion.p>
 
                 {/* CTA Buttons */}

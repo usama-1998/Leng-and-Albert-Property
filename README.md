@@ -6,9 +6,11 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 
 - **Luxury Design System**: Custom "Dark Mode" theme with gold accents, using `Cormorant Garamond` (Serif) and `Montserrat` (Sans).
 - **Interactive Hero**: Cinematic zoom background, high-contrast editorial typography, and interactive video/lead-gen modals.
+- **Featured In**: Credibility section showcasing media features (e.g., Yahoo Finance).
+- **Core Philosophy**: "Six Box Concept" methodology focusing on logical, unemotional property decisions.
 - **Track Record**: Highlight section showing S$500M+ in transaction volume with Property Highlights.
 - **Client Stories**: Elegant testimonial section with marble texture background.
-- **Why Us**: Sticky Parallax cards with conceptual 8K imagery (Data Nexus, Strategy, Legacy).
+- **Why Us**: Sticky Parallax cards with conceptual 8K imagery (Exit Strategy, Legacy Architecture).
 - **Mobile First**: Fully responsive design with touch-friendly navigation, optimized layouts, and preventing horizontal overflow.
 - **Editorial Layouts**: Magazine-style "Brand Story" sections with floating elements.
 - **Social Proof**: Infinite ticker with high-end typography.

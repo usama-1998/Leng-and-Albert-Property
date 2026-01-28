@@ -14,13 +14,13 @@ const steps = [
     {
         title: "The Upgrade",
         subtitle: "Buying Right",
-        description: "Transitioning to a private asset with superior growth potential and lower depreciation risk.",
+        description: "Transitioning to a property with superior growth potential and lower depreciation risk.",
         number: "02"
     },
     {
         title: "The Legacy",
         subtitle: "Compounding Wealth",
-        description: "Rinse and repeat or hold for passive income. The goal is generational security.",
+        description: "Reinvest your profits or hold for passive income. The goal is generational security.",
         number: "03"
     }
 ];
@@ -60,7 +60,7 @@ export default function StrategySection() {
                         Strategy
                     </motion.h2>
                     <p className="font-montserrat text-[#a3a3a3] text-sm leading-relaxed max-w-xs">
-                        Our S.B.S. roadmap is designed to strip away complexity and focus on the three moves that actually move the needle.
+                        Our Six Box Theory is designed to strip away complexity and focus on the three moves that actually move the needle.
                     </p>
                 </div>
 

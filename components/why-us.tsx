@@ -14,13 +14,13 @@ const features = [
     {
         title: "The Exit Strategy",
         number: "02",
-        desc: "Most buy hoping to stay forever. We buy knowing when to sell. We engineer your exit liquidity before you even sign the option.",
+        desc: "Most buy hoping to stay forever. We buy knowing when to sell. We plan your future sale before you even sign the option.",
         image: "/why-us-2.png"
     },
     {
         title: "Legacy Architecture",
         number: "03",
-        desc: "It's not just about one property. It's about structuring a portfolio that compounds, creating a generational safety net for your children.",
+        desc: "It's not just about one property. It's about structuring a portfolio that compounds, building a secure foundation for your own retirement and sustainability.",
         image: "/why-us-3.png"
     }
 ];
