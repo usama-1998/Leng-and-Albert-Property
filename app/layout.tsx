@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Leng & Albert Property | Build Generational Wealth",
   description:
-    "We help HDB owners navigate the 'Decaying Lease' trap and build generational wealth through our proven S.B.S. (Sell, Buy, Sell) roadmap.",
+    "We help HDB owners navigate the 'Decaying Lease' trap and build generational wealth through our proven Six Box Concept.",
 };
 
 export default function RootLayout({
