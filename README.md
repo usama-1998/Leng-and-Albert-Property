@@ -10,6 +10,7 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 - **Core Philosophy**: "Six Box Concept" methodology focusing on logical, unemotional property decisions.
 - **Track Record**: Highlight section showing S$500M+ in transaction volume with Property Highlights.
 - **Client Stories**: Elegant testimonial section with marble texture background.
+- **Floating Contact Widget**: Interactive WhatsApp and Call widget for immediate lead capture.
 - **Why Us**: Sticky Parallax cards with conceptual 8K imagery (Exit Strategy, Legacy Architecture).
 - **Mobile First**: Fully responsive design with touch-friendly navigation, optimized layouts, and preventing horizontal overflow.
 - **Editorial Layouts**: Magazine-style "Brand Story" sections with floating elements.

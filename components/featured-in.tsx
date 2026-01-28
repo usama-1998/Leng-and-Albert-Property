@@ -10,7 +10,7 @@ export default function FeaturedIn() {
                     As Seen In
                 </p>
 
-                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 hover:opacity-80 transition-opacity duration-500">
+                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
 
                     {/* Yahoo Finance Logo */}
                     <div className="h-10 md:h-16 w-auto flex items-center justify-center transition-transform duration-500 hover:scale-110 cursor-pointer">

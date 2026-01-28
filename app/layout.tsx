@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
+import ContactWidget from "@/components/contact-widget";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${cormorant.variable} ${montserrat.variable} bg-[#0a0a0a] text-[#ededed] antialiased selection:bg-white selection:text-black font-sans`}
       >
         {children}
+        <ContactWidget />
       </body>
     </html>
   );
