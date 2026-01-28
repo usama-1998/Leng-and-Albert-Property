@@ -31,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
+        suppressHydrationWarning
         className={`${cormorant.variable} ${montserrat.variable} bg-[#0a0a0a] text-[#ededed] antialiased selection:bg-white selection:text-black font-sans`}
       >
         {children}
