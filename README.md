@@ -15,7 +15,7 @@ A unique, luxury real estate portfolio website designed for high-net-worth clien
 - **Mobile First**: Fully responsive design with touch-friendly navigation, optimized layouts, and preventing horizontal overflow.
 - **Editorial Layouts**: Magazine-style "Brand Story" sections with floating elements.
 - **Social Proof**: Infinite ticker with high-end typography.
-- **Performance**: Built with Next.js 16 (Turbopack) and Framer Motion for 60fps animations.
+- **Performance**: Built with Next.js 16 (Turbopack) and Framer Motion for 60fps animations. Optimized with hydration handling.
 
 ## Tech Stack
 
