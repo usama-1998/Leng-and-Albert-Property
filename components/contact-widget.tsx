@@ -87,13 +87,13 @@ export default function ContactWidget() {
                     <div className="flex items-center space-x-3">
                         <div className="relative">
                             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
-                                <img src="/whatsapdp.png" alt="Christine" className="w-full h-full object-cover" />
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Assistant" className="w-full h-full object-cover" />
                             </div>
                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#075E54] rounded-full"></div>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base leading-tight">Christine</h3>
-                            <p className="text-xs text-green-100 opacity-80">Leng and Albert&apos;s Assistant</p>
+                            <h3 className="font-semibold text-base leading-tight">Your Assistant</h3>
+                            <p className="text-xs text-green-100 opacity-80">Here to help</p>
                         </div>
                     </div>
                     <button
