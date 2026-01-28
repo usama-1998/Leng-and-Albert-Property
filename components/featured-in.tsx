@@ -1,50 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-// Placeholder data for logos. In a real scenario, you would import actual logo assets.
-// Since I don't have the Yahoo logo asset yet, I will use a placeholder approach for now 
-// or I can try to use a text representation if the image isn't available, 
-// but the prompt asked for a Yahoo logo. 
-// I'll assume we might not have the file, so I will prepare a structure 
-// that can easily accept the image. For now I'll use a placeholder text/SVG.
-
-const logos = [
-    {
-        name: "Yahoo Finance",
-        // Using a direct URL or local path. Assuming we don't have the file yet, 
-        // I will use a placeholder or public URL if appropriate, 
-        // but for safety in this environment I'll stick to a text/simple SVG representation 
-        // or a placeholder path that the user can replace.
-        // Actually, often these projects have an assets folder. I'll check if I can find one later.
-        // For now, I'll creates a text-based placeholder that looks like a logo.
-        src: "/yahoo-logo.png",
-        alt: "Yahoo",
-        isImage: false // Flag to switch between image and text/svg for this demo
-    }
-];
 
 export default function FeaturedIn() {
     return (
         <section className="py-12 bg-[#050505] border-b border-white/5">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <p className="font-montserrat text-[#666] text-xs tracking-[0.2em] uppercase mb-8">
-                    Featured In
+                <p className="font-montserrat text-[#666] text-xs tracking-[0.2em] uppercase mb-10">
+                    As Seen In
                 </p>
 
-                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                    {/* 
-                      Start with just Yahoo as requested. 
-                      I will render a text style for Yahoo if no image is present 
-                      to ensure it looks decent immediately.
-                   */}
+                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 hover:opacity-80 transition-opacity duration-500">
 
-                    <div className="text-2xl md:text-3xl font-bold font-serif text-white tracking-tighter">
-                        yahoo<span className="text-[#D4AF37] text-4xl">!</span>
+                    {/* Yahoo Finance Logo */}
+                    <div className="h-8 md:h-10 w-auto flex items-center group">
+                        <svg viewBox="0 0 200 60" className="h-full w-auto fill-current text-white group-hover:text-[#6001D2] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.3,0L13.8,27L2,0H11.5L18.4,17.4L25.3,0H34.8L18.4,41.4V60H8.9V41.4L25.3,0Z" />
+                            <text x="36" y="42" fontFamily="Arial" fontWeight="bold" fontSize="42" fill="currentColor">ahoo!</text>
+                            <text x="165" y="42" fontFamily="Arial" fontSize="42" fill="currentColor">finance</text>
+                        </svg>
                     </div>
 
-                    {/* Add more logos here as needed */}
+                    {/* 99.co Logo - Simplified representation */}
+                    <div className="h-8 md:h-10 w-auto flex items-center group">
+                        <svg viewBox="0 0 100 40" className="h-full w-auto fill-current text-white group-hover:text-[#FF385C] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+                            <text x="0" y="32" fontFamily="Arial" fontWeight="bold" fontSize="36" fill="currentColor">99</text>
+                            <text x="45" y="32" fontFamily="Arial" fontSize="36" fill="currentColor">.co</text>
+                        </svg>
+                    </div>
+
+                    {/* Mediacorp Logo - Simplified representation */}
+                    <div className="h-8 md:h-10 w-auto flex items-center group">
+                        <span className="font-sans text-2xl md:text-3xl font-bold tracking-tight text-white group-hover:text-[#00B9F2] transition-colors duration-300">
+                            mediacorp
+                        </span>
+                    </div>
+
                 </div>
             </div>
         </section>
