@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const awards = [
     { id: 1, year: "2024 (Ceremony for 2023)", image: "/Award 1.jpeg", details: ["Albert Tan: Rising Millionaire & Top Producer (224th Position)", "Leng Kar Yee: Top Associate Group Director (10th Position)"] },
@@ -13,127 +14,156 @@ const awards = [
     { id: 6, year: "2025", image: "/Award 6.jpeg", details: ["Albert Tan: EdgeProp Realtors' Roundtable Member"] },
     { id: 7, year: "2026 (Annual Awards)", image: "/Award 7.jpeg", details: ["Leng Kar Yee: Top Producer & Top Associate Group Director"] },
     { id: 8, year: "2026 (Annual Awards)", image: "/Award 8.jpeg", details: ["Albert Tan: Rising Millionaire (Gala Awards) & Top Producer"] },
+    { id: 9, year: "Recent Recognition", image: "/award 9.jpeg", details: ["Team Performance: Awarded for Outstanding Performance"] },
+    { id: 10, year: "Recent Recognition", image: "/award 10.jpeg", details: ["Team Performance: Awarded for Outstanding Performance"] },
 ];
+
 export default function Awards() {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [direction, setDirection] = useState(1);
+
+    const nextSlide = () => {
+        setDirection(1);
+        setActiveIndex((prev) => (prev + 1) % awards.length);
+    };
+
+    const prevSlide = () => {
+        setDirection(-1);
+        setActiveIndex((prev) => (prev - 1 + awards.length) % awards.length);
+    };
+
+    const activeAward = awards[activeIndex];
+
+    // Animation variants for the elegant swiping effect
+    const imageVariants = {
+        enter: (dir: number) => ({
+            x: dir > 0 ? 50 : -50,
+            opacity: 0,
+            scale: 0.98,
+        }),
+        center: {
+            zIndex: 1,
+            x: 0,
+            opacity: 1,
+            scale: 1,
+        },
+        exit: (dir: number) => ({
+            zIndex: 0,
+            x: dir < 0 ? 50 : -50,
+            opacity: 0,
+            scale: 0.98,
+        }),
+    };
 
     return (
-        <section className="py-24 bg-[#050505] relative overflow-hidden">
-            {/* Background glowing effects to match theme */}
-            <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none transform -translate-y-1/2" />
+        <section className="bg-[#050505] relative w-full py-32 overflow-hidden border-t border-white/5">
             
-            <div className="max-w-7xl mx-auto px-6 mb-12">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-6"
-                >
-                    <div>
-                        <span className="font-montserrat text-[#D4AF37] text-xs tracking-[0.2em] uppercase block mb-4">
-                            Excellence Recognized
-                        </span>
-                        <h2 className="font-cormorant text-4xl md:text-5xl text-[#ededed]">
-                            Award <span className="italic text-[#888]">Gallery</span>
-                        </h2>
-                    </div>
-                    <p className="font-montserrat text-white/60 text-sm max-w-sm md:text-right pb-1">
-                        A testament to our unwavering dedication, expertise, and commitment to delivering exceptional results for our clients.
-                    </p>
-                </motion.div>
+            {/* Background glowing effects */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[150px] pointer-events-none z-0" />
+
+            {/* Header */}
+            <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-20">
+                <span className="font-montserrat text-[#D4AF37] text-xs tracking-[0.3em] uppercase block mb-4">
+                    Excellence Recognized
+                </span>
+                <h2 className="font-cormorant text-5xl md:text-6xl text-[#ededed]">
+                    Award <span className="italic text-[#888]">Gallery</span>
+                </h2>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-6">
-                {/* Desktop view: Expanding Cards */}
-                <div className="hidden md:flex w-full h-[500px] gap-2 lg:gap-4">
-                    {awards.map((award, index) => {
-                        const isHovered = hoveredIndex === index;
-                        const hasHoveredItem = hoveredIndex !== null;
-                        
-                        return (
-                            <motion.div
-                                key={award.id}
-                                className="relative rounded-md overflow-hidden bg-[#050505] cursor-pointer group"
-                                animate={{
-                                    width: isHovered 
-                                        ? "40%" 
-                                        : hasHoveredItem 
-                                            ? "10%" 
-                                            : `${100 / awards.length}%`
-                                }}
-                                transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-                                onMouseEnter={() => setHoveredIndex(index)}
-                                onMouseLeave={() => setHoveredIndex(null)}
-                            >
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                
-                                <Image
-                                    src={award.image}
-                                    alt={`Award ${award.year}`}
-                                    fill
-                                    className={
-                                        (award.id === 7 || award.id === 8) && isHovered
-                                            ? "object-contain"
-                                            : "object-cover"
-                                    }
-                                />
+            <div className="max-w-5xl mx-auto px-4 md:px-6 relative z-20">
+                
+                {/* 1. IMPRESSIVE IMAGE CAROUSEL BOX */}
+                <div className="relative w-full h-[350px] md:h-[500px] bg-[#0a0a0a] rounded-3xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-10 group">
+                    
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/5 to-transparent z-0 pointer-events-none" />
 
-                                {/* Dark gradient at bottom for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                                
-                                {/* Content revealing on hover */}
-                                <div className="absolute bottom-0 left-0 p-6 z-20 w-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 flex flex-col justify-end">
-                                    <span className="font-montserrat text-[#D4AF37] text-[10px] tracking-[0.2em] uppercase block mb-2">
-                                        {award.year}
-                                    </span>
-                                    <div className="flex flex-col gap-1 mb-3">
-                                        {award.details.map((detail, i) => (
-                                            <p key={i} className="font-cormorant text-lg lg:text-xl text-white leading-snug">
-                                                {detail}
-                                            </p>
-                                        ))}
-                                    </div>
-                                    <div className="h-[1px] w-12 bg-[#D4AF37] mb-2" />
-                                </div>
-                            </motion.div>
-                        );
-                    })}
-                </div>
-
-                {/* Mobile view: Masonry / Grid */}
-                <div className="md:hidden grid grid-cols-2 gap-4">
-                    {awards.map((award, index) => (
+                    <AnimatePresence initial={false} custom={direction}>
                         <motion.div
-                            key={award.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="relative rounded-md overflow-hidden h-[200px] col-span-1"
+                            key={activeIndex}
+                            custom={direction}
+                            variants={imageVariants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.4 } }}
+                            className="absolute inset-0 z-10"
                         >
                             <Image
-                                src={award.image}
-                                alt={`Award ${award.year}`}
+                                src={activeAward.image}
+                                alt={`Award ${activeAward.year}`}
                                 fill
-                                className="object-cover"
+                                className="object-contain p-4 md:p-8"
+                                priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-                            <div className="absolute bottom-0 left-0 p-4 z-20 w-full flex flex-col justify-end h-full mt-auto">
-                                <span className="font-montserrat text-[#D4AF37] text-[9px] tracking-[0.1em] uppercase block mb-1">
-                                    {award.year}
-                                </span>
-                                <div className="flex flex-col gap-1">
-                                    {award.details.map((detail, i) => (
-                                        <p key={i} className="font-cormorant text-[13px] leading-tight text-white drop-shadow-md">
-                                            {detail}
+                        </motion.div>
+                    </AnimatePresence>
+
+                    {/* Left/Right Navigation Arrows */}
+                    <button 
+                        onClick={prevSlide}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/50 transition-colors bg-black/50 backdrop-blur-md z-30 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                        aria-label="Previous Award"
+                    >
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
+
+                    <button 
+                        onClick={nextSlide}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/50 transition-colors bg-black/50 backdrop-blur-md z-30 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                        aria-label="Next Award"
+                    >
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
+                    
+                    {/* Modern fractional counter */}
+                    <div className="absolute bottom-6 right-6 z-30 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 transition-opacity duration-300">
+                        <span className="font-montserrat text-[#D4AF37] text-xs tracking-widest font-medium">
+                            {activeIndex + 1} <span className="text-white/40">/ {awards.length}</span>
+                        </span>
+                    </div>
+
+                    {/* Frame border reflection */}
+                    <div className="absolute inset-0 border-2 border-white/5 rounded-3xl pointer-events-none z-20" />
+                </div>
+
+                {/* 2. ELEGANT BOTTOM TEXT REPRESENTATION */}
+                <div className="w-full relative h-[180px] md:h-[150px]">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeIndex}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.4 }}
+                            className="absolute inset-0 flex flex-col items-center text-center px-4"
+                        >
+                            <div className="w-8 h-[1px] bg-[#D4AF37]/50 mb-6" />
+                            <span className="font-montserrat text-[#D4AF37] text-[10px] md:text-xs tracking-[0.2em] uppercase mb-4">
+                                {activeAward.year}
+                            </span>
+                            
+                            <div className="flex flex-col gap-2 max-w-3xl">
+                                {activeAward.details.map((detail, i) => {
+                                    const parts = detail.split(":");
+                                    return (
+                                        <p key={i} className="font-cormorant text-2xl md:text-3xl text-white leading-snug">
+                                            {parts.length > 1 ? (
+                                                <>
+                                                    <span className="text-[#ededed]">{parts[0]}: </span>
+                                                    <span className="italic text-[#a3a3a3] leading-snug">{parts[1]}</span>
+                                                </>
+                                            ) : (
+                                                <span className="leading-snug">{detail}</span>
+                                            )}
                                         </p>
-                                    ))}
-                                </div>
+                                    );
+                                })}
                             </div>
                         </motion.div>
-                    ))}
+                    </AnimatePresence>
                 </div>
+
             </div>
         </section>
     );
