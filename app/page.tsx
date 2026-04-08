@@ -8,6 +8,8 @@ import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import Portfolio from "@/components/portfolio";
 import Testimonials from "@/components/testimonials";
+import VideoTestimonials from "@/components/video-testimonials";
+import Awards from "@/components/awards";
 
 import FeaturedIn from "@/components/featured-in";
 
@@ -20,7 +22,9 @@ export default function Home() {
       {/* <SocialProof /> */}
       <StrategySection />
       <Portfolio />
+      <Awards />
       <BrandStory />
+      <VideoTestimonials />
       <Testimonials />
       <WhyUs />
       <ContactSection />
