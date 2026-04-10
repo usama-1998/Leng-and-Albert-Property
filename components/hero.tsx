@@ -22,7 +22,7 @@ export default function Hero() {
     return (
         <section
             ref={containerRef}
-            className="relative h-[120vh] w-full overflow-hidden bg-[#050505] flex flex-col justify-center items-center"
+            className="relative min-h-[100svh] md:h-[120vh] w-full overflow-hidden bg-[#050505] flex flex-col justify-center items-center py-20 md:py-0"
         >
             {/* Background with Zoom Effect */}
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -47,7 +47,7 @@ export default function Hero() {
                     Real Estate Wealth Strategy
                 </motion.span>
 
-                <h1 className="font-cormorant text-6xl md:text-8xl lg:text-9xl font-light tracking-tight text-[#ededed] leading-[0.9] mb-8 mix-blend-difference">
+                <h1 className="font-cormorant text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-light tracking-tight text-[#ededed] leading-[1.1] md:leading-[0.9] mb-8 mix-blend-difference">
                     BUILDING <br />
                     <span className="italic font-normal text-[#999]">GENERATIONAL</span> <br />
                     WEALTH

@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="relative py-32 bg-[#0a0a0a] overflow-hidden">
+        <section className="relative py-24 md:py-32 bg-[#0a0a0a] overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-[url('/testimonial-bg.png')] bg-cover bg-fixed opacity-20 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-black/80" />
@@ -54,7 +54,7 @@ export default function Testimonials() {
                         {[...testimonials, ...testimonials].map((item, index) => (
                             <div
                                 key={`${item.id}-${index}`}
-                                className="w-[400px] flex-shrink-0 flex flex-col items-center text-center p-8 bg-white/5 border border-white/10 rounded-sm hover:border-[#D4AF37]/50 transition-colors"
+                                className="w-[300px] md:w-[400px] flex-shrink-0 flex flex-col items-center text-center p-6 md:p-8 bg-white/5 border border-white/10 rounded-sm hover:border-[#D4AF37]/50 transition-colors"
                             >
                                 <p className="font-montserrat text-[#ccc] text-sm leading-8 italic mb-8 tracking-wide">
                                     "{item.quote}"

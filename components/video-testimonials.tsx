@@ -32,7 +32,7 @@ export default function VideoTestimonials() {
     };
 
     return (
-        <section className="py-32 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
+        <section className="py-24 md:py-32 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
             {/* Background glowing effects to match theme */}
             <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[150px] pointer-events-none transform -translate-y-1/2" />
             <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
@@ -43,7 +43,7 @@ export default function VideoTestimonials() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row justify-between items-end gap-6"
+                    className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6"
                 >
                     <div>
                         <span className="font-montserrat text-[#D4AF37] text-xs tracking-[0.2em] uppercase block mb-4">
@@ -89,7 +89,7 @@ export default function VideoTestimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: Math.min(index * 0.1, 0.5) }}
                             viewport={{ once: true, margin: "-50px" }}
-                            className="relative flex-none w-[280px] md:w-[320px] lg:w-[340px] aspect-[9/16] rounded-[2rem] overflow-hidden snap-center group shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 hover:border-[#D4AF37]/40 hover:-translate-y-4 transition-all duration-500 bg-[#000]"
+                            className="relative flex-none w-[260px] md:w-[320px] lg:w-[340px] aspect-[9/16] rounded-[2rem] overflow-hidden snap-center group shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 hover:border-[#D4AF37]/40 hover:md:-translate-y-4 transition-all duration-500 bg-[#000]"
                         >
                             {/* Inner golden glow that appears on hover */}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
